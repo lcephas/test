@@ -13,7 +13,7 @@
 
 	"hostRequirements": {
 		"memory": "16gb"
-	}
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
@@ -21,7 +21,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
