@@ -1,13 +1,13 @@
-// Alpine base — used to exercise the pip-venv rung of the az install ladder.
+// Fedora base — used to exercise the dnf → pip-venv rung of the az install ladder.
+// sshd is installed in the Dockerfile (the devcontainers/features/sshd:1 feature is
+// Debian/Ubuntu-only and fails on non-apt distros).
 {
-	"name": "Alpine (apk → pip-venv az install)",
+	"name": "Fedora (dnf → pip-venv az install)",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-	"features": {
-		"ghcr.io/devcontainers/features/sshd:1": {}
-	},
 	"hostRequirements": {
 		"memory": "8gb"
-	}
+	},
+	"overrideCommand": false
 }
